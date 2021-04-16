@@ -4,33 +4,28 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Путешествие по Европе</title>
-  <link rel="preload" href="../build/fonts/opensans.woff2" as="font" type="font/woff2">
-  <link rel="stylesheet" href="../build/css/styles.min.css">
+  <link rel="preload" href="../fonts/montserrat-v15-cyrillic-regular.woff2" as="font" type="font/woff2">
+  <link rel="stylesheet" href="../css/styles.min.css">
 </head>
 
 <body class="body">
 
 <header class="header">
   <div class="header__inner">
-    <span class="header__logo">
-      Логотип
-      <picture>
-        <source media="(min-width: 1150px)" srcset="./img/logo-desktop.svg">
-        <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
-        <img src="./img/logo-mobile.svg" alt="Логотип">
-      </picture>
-    </span>
-
+    <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" width="58" height="22">
+      <use xlink:href="#logo"></use>
+    </svg>
     <div class="header-toggle">
       <input class="header-toggle__control" type="checkbox" name="color" id="toggle" value="Toggle">
       <label class="header-toggle__text" for="toggle"></label>
       <nav class="header__nav">
-        <a class="header__nav-link header__nav-link--On-journey" href="#" aria-label="О путешествии">О путешествии</a>
+        <a class="header__nav-link header__nav-link--On-journey" href="#" aria-label="О путешествии">
+          О путешествии</a>
         <a class="header__nav-link header__nav-link--prices" href="#" aria-label="Цены">Цены</a>
-        <a class="header__nav-link header__nav-link--tel" href="tel:+749978468446"
+        <a class="header__nav-link header__nav-link--icon header__nav-link--tel" href="tel:+749978468446"
            aria-label="Позвонить нам на телефон +7 499 784 684 46">
-          <svg class="header__nav-icon header__nav-icon--tel" width="21" height="18">
-            <use xlink:href="#icon-tel"></use>
+          <svg class="header__nav-icon header__nav-icon--tel" width="30" height="30">
+            <use xlink:href="#phone-icon"></use>
           </svg>
           +7 (499) 784-684-46</a>
       </nav>
@@ -38,92 +33,138 @@
   </div>
 </header>
 
-<main class="main">
-  <h1 class="visually-hidden">Путешествие по Европе</h1>
-  <section class="intro">
-    <h2 class="intro__title">Путешествие по Европе</h2>
-    <p class="intro__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также
-      потрясающая красота
-      природы.</p>
-    <a class="intro__item" href="#" aria-label="Cмотреть тур">
-      Cмотреть тур
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 1V15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M15 8L8 15L1 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-  </section>
+<!--<main class="main" >-->
+<!--  <h1 class="visually-hidden">Путешествие по Европе</h1>-->
+<!--  <section class="intro">-->
+<!--    <h2 class="intro__title">Путешествие по Европе</h2>-->
+<!--    <p class="intro__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также-->
+<!--      потрясающая красота-->
+<!--      природы.</p>-->
+<!--    <a class="intro__item" href="#" aria-label="Cмотреть тур">-->
+<!--      Cмотреть тур-->
+<!--      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--        <path d="M8 1V15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--        <path d="M15 8L8 15L1 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--      </svg>-->
+<!--    </a>-->
+<!--  </section>-->
 
-  <section class="places">
-    <h2 class="places__title">Места посещения</h2>
-    <p class="places__text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
-    <div class="places__list">
-      <div class="places__item">
-        <picture class="places__item-preview"></picture>
-        <h3 class="places__item-title">Греция</h3>
-      </div>
-      <div class="places__item">
-        <picture class="places__item-preview"></picture>
-        <h3 class="places__item-title">Албания</h3>
-      </div>
-      <div class="places__item">
-        <picture class="places__item-preview"></picture>
-        <h3 class="places__item-title">Македония</h3>
-      </div>
-      <div class="places__item">
-        <picture class="places__item-preview"></picture>
-        <h3 class="places__item-title">Черногория</h3>
-      </div>
-      <div class="places__item">
-        <picture class="places__item-preview"></picture>
-        <h3 class="places__item-title">Хорватия</h3>
-      </div>
-    </div>
-  </section>
+<!--  <section class="places">-->
+<!--    <h2 class="places__title">Места посещения</h2>-->
+<!--    <p class="places__text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>-->
+<!--    <div class="places__list">-->
+<!--      <div class="places__item">-->
+<!--        <picture class="places__item-preview"></picture>-->
+<!--        <h3 class="places__item-title">Греция</h3>-->
+<!--      </div>-->
+<!--      <div class="places__item">-->
+<!--        <picture class="places__item-preview"></picture>-->
+<!--        <h3 class="places__item-title">Албания</h3>-->
+<!--      </div>-->
+<!--      <div class="places__item">-->
+<!--        <picture class="places__item-preview"></picture>-->
+<!--        <h3 class="places__item-title">Македония</h3>-->
+<!--      </div>-->
+<!--      <div class="places__item">-->
+<!--        <picture class="places__item-preview"></picture>-->
+<!--        <h3 class="places__item-title">Черногория</h3>-->
+<!--      </div>-->
+<!--      <div class="places__item">-->
+<!--        <picture class="places__item-preview"></picture>-->
+<!--        <h3 class="places__item-title">Хорватия</h3>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 
-  <section class="places-info">
+<!--  <section class="places-info">-->
+<!--    <div class="places-nav">-->
+<!--      <button>Греция</button>-->
+<!--      <button>Албания</button>-->
+<!--      <button>Македония</button>-->
+<!--      <button>Черногория</button>-->
+<!--      <button>Хорватия</button>-->
+<!--    </div>-->
+<!--  </section>-->
 
-  </section>
+<!--</main>-->
 
-</main>
+<!--<footer class="footer">-->
+<!--  <div class="footer__inner">-->
+<!--    <a class="footer__logo">-->
+<!--      Логотип Мишка-->
+<!--      <svg class="footer__logo-icon" width="102" height="34">-->
+<!--        <use xlink:href="#footer-logo-icon"></use>-->
+<!--      </svg>-->
+<!--    </a>-->
+<!--    <div class="footer__social">-->
+<!--      <a class="footer__social-item" href="#" aria-label="Инстаграм">Инстаграм-->
+<!--        <svg class="footer__svg" width="22" height="21">-->
+<!--          <use xlink:href="#icon-instagram"></use>-->
+<!--        </svg>-->
+<!--      </a>-->
+<!--      <a class="footer__social-item" href="#" aria-label="Фейсбук">Фейсбук-->
+<!--        <svg class="footer__svg" width="15" height="28">-->
+<!--          <use xlink:href="#icon-facebook"></use>-->
+<!--        </svg>-->
+<!--      </a>-->
+<!--      <a class="footer__social-item" href="#" aria-label="Твиттер">Твиттер-->
+<!--        <svg class="footer__svg" width="23" height="20">-->
+<!--          <use xlink:href="#icon-twitter"></use>-->
+<!--        </svg>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--    <p class="footer__copyright">-->
+<!--      Разработано-->
+<!--      <a class="footer__academy" href="https://htmlacademy.ru/intensive/adaptive">-->
+<!--        HTML Academy-->
+<!--        <svg class="footer__academy-icon" width="27" height="34">-->
+<!--          <use xlink:href="#icon-academy"></use>-->
+<!--        </svg>-->
+<!--      </a>-->
+<!--    </p>-->
+<!--  </div>-->
+<!--</footer>-->
 
-<footer class="footer">
-  <div class="footer__inner">
-    <a class="footer__logo">
-      Логотип Мишка
-      <svg class="footer__logo-icon" width="102" height="34">
-        <use xlink:href="#footer-logo-icon"></use>
-      </svg>
-    </a>
-    <div class="footer__social">
-      <a class="footer__social-item" href="#" aria-label="Инстаграм">Инстаграм
-        <svg class="footer__svg" width="22" height="21">
-          <use xlink:href="#icon-instagram"></use>
-        </svg>
-      </a>
-      <a class="footer__social-item" href="#" aria-label="Фейсбук">Фейсбук
-        <svg class="footer__svg" width="15" height="28">
-          <use xlink:href="#icon-facebook"></use>
-        </svg>
-      </a>
-      <a class="footer__social-item" href="#" aria-label="Твиттер">Твиттер
-        <svg class="footer__svg" width="23" height="20">
-          <use xlink:href="#icon-twitter"></use>
-        </svg>
-      </a>
-    </div>
-    <p class="footer__copyright">
-      Разработано
-      <a class="footer__academy" href="https://htmlacademy.ru/intensive/adaptive">
-        HTML Academy
-        <svg class="footer__academy-icon" width="27" height="34">
-          <use xlink:href="#icon-academy"></use>
-        </svg>
-      </a>
-    </p>
-  </div>
-</footer>
+<svg xmlns="http://www.w3.org/2000/svg" style="position: fixed; z-index: -100; opacity: 0; height: 0; width: 0;">
 
+  <symbol id="logo" viewBox="0 0 58 22" fill="none" preserveAspectRatio="xMidYMid meet">
+    <path
+      d="M27.734 0l-5.676 17.073h-4.312l-3.817-11.56-3.94 11.56H5.7L0 0h4.164L8.08 12l4.09-12h3.717l3.965 12.098L23.892 0h3.842zM34.089 3.756c2.065 0 3.651.488 4.758 1.464 1.107.959 1.66 2.414 1.66 4.365v7.488H36.89V15.44c-.727 1.22-2.082 1.83-4.064 1.83-1.025 0-1.917-.171-2.677-.513-.744-.341-1.314-.813-1.71-1.415-.397-.601-.595-1.284-.595-2.048 0-1.22.463-2.18 1.388-2.878.942-.7 2.387-1.05 4.337-1.05h3.073c0-.828-.256-1.463-.768-1.902-.512-.455-1.28-.683-2.305-.683a6.72 6.72 0 00-2.106.342c-.678.211-1.256.504-1.735.878l-1.388-2.659c.727-.504 1.594-.894 2.602-1.17a12.029 12.029 0 013.148-.415zm-.298 10.951c.661 0 1.248-.146 1.76-.439a2.535 2.535 0 001.09-1.341v-1.342H33.99c-1.587 0-2.38.513-2.38 1.537 0 .488.19.878.57 1.17.397.277.934.415 1.611.415zM57 3.951l-6.023 13.927c-.611 1.512-1.371 2.577-2.28 3.195-.892.618-1.974.927-3.247.927-.694 0-1.38-.106-2.057-.317-.677-.212-1.23-.504-1.66-.878l1.412-2.707a3.37 3.37 0 002.181.829c.53 0 .959-.13 1.29-.39.33-.244.627-.659.892-1.244l.05-.122-5.776-13.22h3.99l3.743 8.903 3.767-8.903H57z"
+      fill="#141517"/>
+    <path
+      d="M57.017 3.95l-6.022 13.927c-.612 1.512-1.372 2.577-2.28 3.195-.893.618-1.975.927-3.247.927-.694 0-1.38-.106-2.057-.317-.678-.211-1.231-.504-1.661-.878l1.413-2.707a3.368 3.368 0 002.18.829c.53 0 .96-.13 1.29-.39.33-.244.627-.659.892-1.244l.05-.122 1.957-4.317L53.3 3.95h3.717z"
+      fill="#FE7865"/>
+  </symbol>
+
+  <symbol id="phone-icon" viewBox="0 0 30 30" fill="none" preserveAspectRatio="xMidYMid meet">
+    <path
+      d="M7.396 8.624c-.084-1.198.182-2.378.885-3.327.61-.86 1.404-1.33 2.362-1.605.806-.24 1.334.054 1.567.95.332 1.34.806 2.68.978 4.092.055.62-.347 1.5-.782 1.952-1.09 1.073-.863 1.854-.036 3.478.257.524.664 1.43 1.459 2.628.827 1.207 1.265 1.855 2.328 1.305 1.18-.594 2.041-.212 2.932.747.604.693 1.268 1.288 1.872 1.98.873 1.03.834 1.74.151 2.467-1.229 1.34-3.258 1.783-4.768.886-.833-.489-1.664-1.128-2.325-1.874-2.914-3.32-5.016-7.182-6.281-11.54a10.989 10.989 0 01-.342-2.139z"
+      stroke="#141517" stroke-width="2" stroke-miterlimit="10"/>
+  </symbol>
+
+  <symbol id="arrow-right-icon" viewBox="0 0 8 12" fill="none" preserveAspectRatio="xMidYMid meet">
+    <g clip-path="url(#clip0)">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.4L4.6 6 0 10.6 1.4 12l6-6-6-6L0 1.4z" fill="#2C2E3F"
+            fill-opacity=".5"/>
+    </g>
+    <defs>
+      <clipPath id="clip0">
+        <path fill="#fff" transform="rotate(-90 6 6)" d="M0 0h12v7.4H0z"/>
+      </clipPath>
+    </defs>
+  </symbol>
+
+  <symbol id="arrow-down-icon" viewBox="0 0 16 16" fill="none" preserveAspectRatio="xMidYMid meet">
+    <path d="M8 1v14M15 8l-7 7-7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="arrow-down-icon" viewBox="0 0 26 20" fill="none" preserveAspectRatio="xMidYMid meet">
+    <path
+      d="M24.227 0H1.773C.768 0 0 .765 0 1.765v16.47C0 19.235.768 20 1.773 20h22.454C25.232 20 26 19.235 26 18.235V1.765C26 .765 25.232 0 24.227 0zm0 17l-4.668-4.647a.86.86 0 00-1.24 0 .85.85 0 000 1.235l4.667 4.647H3.014l4.668-4.647a.85.85 0 000-1.235.86.86 0 00-1.241 0L1.773 17V5.706l10.636 8a.955.955 0 00.532.176.955.955 0 00.532-.176l10.754-8V17zm0-15.235V3.47l-11.286 8.352L1.773 3.471V1.765h22.454z"
+      fill="#D7D9DF"/>
+  </symbol>
+
+</svg>
 
 <script src="../build/js/modal.min.js"></script>
 </body>

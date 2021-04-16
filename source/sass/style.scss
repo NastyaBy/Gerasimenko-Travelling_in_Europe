@@ -1,8 +1,7 @@
-@import "media";
-@import "fonts";
-
-
-$body-background-color: #ffffff;
+@import 'media';
+@import 'fonts';
+@import 'variables.scss';
+@import "_blocks/header.scss";
 
 .head {
   height: 100%;
@@ -16,7 +15,7 @@ $body-background-color: #ffffff;
   grid-template-rows: min-content 1fr min-content;
   margin: 0 auto;
   padding: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   background-color: $body-background-color;
