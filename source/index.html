@@ -33,21 +33,29 @@
   </div>
 </header>
 
-<!--<main class="main" >-->
-<!--  <h1 class="visually-hidden">Путешествие по Европе</h1>-->
-<!--  <section class="intro">-->
-<!--    <h2 class="intro__title">Путешествие по Европе</h2>-->
-<!--    <p class="intro__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также-->
-<!--      потрясающая красота-->
-<!--      природы.</p>-->
-<!--    <a class="intro__item" href="#" aria-label="Cмотреть тур">-->
-<!--      Cмотреть тур-->
-<!--      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--        <path d="M8 1V15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>-->
-<!--        <path d="M15 8L8 15L1 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>-->
-<!--      </svg>-->
-<!--    </a>-->
-<!--  </section>-->
+<main class="main" >
+  <h1 class="visually-hidden">Путешествие по Европе</h1>
+  <section class="intro">
+    <picture class="intro__picture">
+<!--      <source type="image/webp" media="(min-width: 1150px)" srcset="./img/triple-set-desktop@1x.webp 1x, ./img/triple-set-desktop@2x.webp 2x">-->
+<!--      <source type="image/webp" media="(min-width: 768px)" srcset="./img/triple-set-tablet@1x.webp 1x, ./img/triple-set-tablet@2x.webp 2x">-->
+<!--      <source type="image/webp" srcset="./img/triple-set-mobile@1x.webp 1x, ./img/triple-set-mobile@2x.webp 2x">-->
+      <source media="(min-width: 1150px)" srcset="./img/main-desktop@1x.jpg 1x, ./img/main-desktop@2x.jpg 2x">
+      <source media="(min-width: 768px)" srcset="./img/main-tablet@1x.jpg 1x, ./img/main-tablet@2x.jpg 2x">
+      <img src="img/main-mobile@1x.jpg" srcset="./img/main-mobile@2x.jpg 2x" alt="Пейзаж Греции">
+    </picture>
+    <h2 class="intro__title">Путешествие по Европе</h2>
+    <p class="intro__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также
+      потрясающая красота
+      природы.</p>
+    <a class="button intro__button" href="#" aria-label="Cмотреть тур">
+      Cмотреть тур
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 1V15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 8L8 15L1 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </section>
 
 <!--  <section class="places">-->
 <!--    <h2 class="places__title">Места посещения</h2>-->
@@ -86,7 +94,7 @@
 <!--    </div>-->
 <!--  </section>-->
 
-<!--</main>-->
+</main>
 
 <!--<footer class="footer">-->
 <!--  <div class="footer__inner">-->
