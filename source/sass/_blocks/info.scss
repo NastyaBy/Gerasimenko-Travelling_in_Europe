@@ -1,0 +1,60 @@
+@import '../variables.scss';
+
+.info {
+  max-width: 1153px;
+  margin: 0 auto;
+  overflow: hidden;
+
+
+  &__nav {
+    display: flex;
+  }
+
+  &__nav-button {
+    padding: 15px 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $info-nav-button-color;
+    background: none;
+    border: none;
+
+    &:hover {
+      color: $accent-primary-color;
+    }
+
+    &--active {
+      cursor: default;
+      border: 0;
+      pointer-events: none;
+      color: $accent-primary-color;
+    }
+  }
+
+  &__list {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    &--inline {
+      font-size: 0;
+      white-space: nowrap;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    letter-spacing: normal;
+    vertical-align: top;
+    word-spacing: normal;
+    white-space: normal;
+  }
+
+  &__decorative-line {
+    display: inline-block;
+    height: 4px;
+    width: 228px;
+    background-color: $accent-primary-color;
+  }
+}

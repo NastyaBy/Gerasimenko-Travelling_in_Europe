@@ -5,7 +5,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 1075px;
+  padding-left: calc(50% + 124px);
 
   @include for-size(tablet) {
     padding: 0;
@@ -19,7 +19,6 @@
     top: 99px;
     right: 0;
     left: 0;
-    width: 100vw;
 
     & > * {
       display: block;
@@ -33,7 +32,7 @@
   }
 
   &__title {
-    margin-top: 185px;
+    margin-top: calc(22% + 3px);
     margin-bottom: 30px;
     max-width: 400px;
     font-weight: 600;
@@ -92,16 +91,27 @@
     margin-bottom: 297px;
     background: $accent-primary-color url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1v14M15 8l-7 7-7-7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 88% 50% no-repeat;
 
+    &:hover {
+      background: $hover-accent-color url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1v14M15 8l-7 7-7-7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 88% 50% no-repeat;
+    }
+
     @include for-size(tablet) {
       width: 170px;
       margin-bottom: 82px;
       background: $accent-primary-color url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1v14M15 8l-7 7-7-7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 83% 50% no-repeat;
+
+      &:hover {
+        background: $hover-accent-color url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1v14M15 8l-7 7-7-7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 83% 50% no-repeat;
+      }
     }
     @include for-size(phone-only) {
       width: 208px;
       margin-bottom: 28px;
       background: $accent-primary-color url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1v14M15 8l-7 7-7-7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 86% 50% no-repeat;
 
+      &:hover {
+        background: $hover-accent-color url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1v14M15 8l-7 7-7-7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 86% 50% no-repeat;
+      }
     }
   }
 }

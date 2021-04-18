@@ -131,6 +131,7 @@ exports.minifyjs = minifyjs;
 // Watcher
   const watcher = () => {
     gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+    gulp.watch("src/**/*.js");
     gulp.watch("source/*.html").on("change", sync.reload);
   }
 

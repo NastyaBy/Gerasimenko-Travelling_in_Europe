@@ -76,6 +76,10 @@
     white-space: nowrap;
     text-decoration: none;
 
+    &:hover {
+      color: $accent-primary-color;
+    }
+
     @include for-size(tablet) {
       align-self: baseline;
       margin: 0;
@@ -103,12 +107,13 @@
       text-decoration: underline;
       text-decoration-color: $darkest-darkest-color;
 
-      @include for-size(tablet) {
-        display: none;
-      }
-
       &:hover {
         text-decoration: none;
+        color: $accent-primary-color;
+      }
+
+      @include for-size(tablet) {
+        display: none;
       }
     }
 

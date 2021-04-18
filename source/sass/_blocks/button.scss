@@ -12,7 +12,12 @@
   text-transform: uppercase;
   text-decoration: none;
   outline: none;
+  border: none;
   cursor: pointer;
+
+  &:hover {
+    background: $hover-accent-color;
+  }
 
   @include for-size(tablet) {
     padding: 19px 40px;
