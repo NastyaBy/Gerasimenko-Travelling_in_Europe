@@ -5,6 +5,13 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  padding-left: 1075px;
+
+  @include for-size(tablet) {
+    padding: 0;
+    align-items: center;
+  }
+
 
   &__picture {
     position: absolute;
@@ -13,25 +20,88 @@
     right: 0;
     left: 0;
     width: 100vw;
+
+    & > * {
+      display: block;
+      width: 100%;
+    }
+
+    @include for-size(tablet) {
+      top: 50px;
+    }
+
   }
 
   &__title {
-    margin-left: 50%;
+    margin-top: 185px;
+    margin-bottom: 30px;
+    max-width: 400px;
     font-weight: 600;
     font-size: 55px;
     line-height: 80px;
+    letter-spacing: -1.10667px;
     color: $body-background-color;
+
+    @include for-size(tablet) {
+      margin-top: 65px;
+      margin-bottom: 15px;
+      font-size: 30px;
+      line-height: 45px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+    @include for-size(phone-only) {
+      margin-top: 82px;
+      margin-bottom: 100px;
+      padding: 0 30px;
+      max-width: 260px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
   }
 
   &__text {
-    margin-left: 50%;
+    margin-top: 0;
+    margin-bottom: 32px;
+    max-width:380px;
     font-size: 16px;
     line-height: 27px;
     color: $body-background-color;
+    letter-spacing: -0.466667px;
+
+
+    @include for-size(tablet) {
+      max-width: 400px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: -0.466667px
+    }
+    @include for-size(phone-only) {
+      margin-bottom: 21px;
+      padding: 0 26px;
+      color: $darkest-color ;
+      letter-spacing: -0.466667px;
+    }
   }
 
   &__button {
-    margin-left: 50%;
-    width: 340px;
+    width: 260px;
+    margin-bottom: 297px;
+    background: $accent-primary-color url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1v14M15 8l-7 7-7-7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 88% 50% no-repeat;
+
+    @include for-size(tablet) {
+      width: 170px;
+      margin-bottom: 82px;
+      background: $accent-primary-color url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1v14M15 8l-7 7-7-7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 83% 50% no-repeat;
+    }
+    @include for-size(phone-only) {
+      width: 208px;
+      margin-bottom: 28px;
+      background: $accent-primary-color url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1v14M15 8l-7 7-7-7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 86% 50% no-repeat;
+
+    }
   }
 }

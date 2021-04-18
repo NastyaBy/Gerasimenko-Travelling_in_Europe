@@ -1,0 +1,110 @@
+@import '../variables.scss';
+
+.places {
+  max-width: 1153px;
+  margin: 0 auto;
+
+  @include for-size(tablet) {
+    text-align: center;
+  }
+
+  &__title {
+    max-width: 200px;
+    margin-top: 200px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 80px;
+    letter-spacing: -1.245px;
+
+    @include for-size(tablet) {
+      margin: 81px 0 20px;
+      padding: 0;
+      max-width: none;
+      font-size: 30px;
+      line-height: 45px;
+      letter-spacing: 0;
+    }
+    @include for-size(phone-only) {
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+    }
+  }
+
+  &__decorative-line {
+    display: inline-block;
+    height: 4px;
+    width: 228px;
+    background-color: $accent-primary-color;
+
+    @include for-size(tablet) {
+      display: none;
+    }
+  }
+
+  &__text {
+    max-width: 350px;
+    margin: 24px 0 55px;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.466667px;
+    color: $places-text-color ;
+
+    @include for-size(tablet) {
+      text-align: center;
+      margin: 20px auto 40px;
+      letter-spacing: -0.466667px;
+    }
+    @include for-size(phone-only) {
+      margin: 20px auto;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+    @include for-size(tablet) {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content;
+
+  }
+
+  &__item-preview {
+    grid-column: 1;
+    grid-row: 1/-1;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item-title {
+    grid-column: 1;
+    grid-row: 2/3;
+    margin: 0 68px;
+    padding: 16px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -0.415px;
+    color: $darkest-color;
+    background: $body-background-color;
+
+    @include for-size(tablet) {
+      margin: 0 49px;
+    }
+
+    @include for-size(phone-only) {
+      margin: 0 36px;
+    }
+  }
+}
