@@ -1,0 +1,49 @@
+@import '../variables.scss';
+
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 305px;
+  padding: 30px;
+  border: 3px solid $accent-primary-color ;
+  border-radius: 6px;
+  background: $body-background-color;
+
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0 20px;
+    padding: 0;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: right;
+    color: $accent-primary-color;
+  }
+
+  &__sum {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 34px;
+    color: $accent-primary-color;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__decorative-line {
+    display: inline-block;
+    height: 1px;
+    width: 310px;
+    background-color: $accent-primary-color;
+  }
+}

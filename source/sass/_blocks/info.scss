@@ -42,6 +42,7 @@
   &__list {
     position: relative;
     transition: all 0.3s ease-in-out;
+    margin-bottom: 230px;
 
     &--inline {
       display: flex;
@@ -94,5 +95,10 @@
 
   &__picture {
     padding: 0;
+  }
+
+  &__prices {
+    display: flex;
+    gap: 30px;
   }
 }

@@ -1,0 +1,25 @@
+@import '../variables.scss';
+
+.info-price {
+  margin: 10% 0 0 7%;
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 90px;
+  }
+
+  &__decorative-line {
+    display: inline-block;
+    height: 2.92px;
+    width: 175px;
+    background-color: $accent-primary-color;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 27px;
+    color: $info-price-text-color;
+  }
+}
