@@ -1,0 +1,37 @@
+@import '../variables.scss';
+
+.review {
+  grid-column: 3/4;
+  grid-row: 1/-1;
+
+  &__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: -0.691667px;
+  }
+
+  &__decorative-line {
+    width: 68px;
+    height: 0.71px;
+    color: $accent-primary-color;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: -0.408333px;
+    color: $review-text-color;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.466667px;
+  }
+}

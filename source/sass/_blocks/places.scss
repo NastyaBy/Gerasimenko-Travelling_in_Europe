@@ -67,6 +67,8 @@
     gap: 30px;
     justify-content: center;
 
+    margin-bottom: 140px;
+
     @include for-size(tablet) {
       gap: 20px;
     }
