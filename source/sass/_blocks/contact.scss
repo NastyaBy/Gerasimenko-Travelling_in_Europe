@@ -7,9 +7,16 @@
   align-items: center;
 
   &__title {
+    margin: 0;
     font-weight: 500;
     font-size: 22px;
     line-height: 34px;
+
+    @include for-size(tablet) {
+      font-size: 18px;
+      line-height: 34px;
+      margin-bottom: 10px;
+    }
   }
 
   &__tel {
@@ -18,12 +25,24 @@
     text-decoration: none;
     color: $contact-tel-color;
 
+
+    @include for-size(tablet) {
+      font-size: 18px;
+      text-decoration: underline;
+      color: $accent-primary-color ;
+      text-decoration-color: $accent-primary-color;
+    }
+
     &:hover {
       color: $accent-primary-color;
     }
-
+  }
     &__icon {
       align-items: center;
-    }
+
+      @include for-size(tablet) {
+        display: none;
+      }
+
   }
 }

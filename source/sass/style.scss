@@ -11,6 +11,9 @@
 @import "_blocks/price.scss";
 @import "_blocks/info-price.scss";
 @import "_blocks/contact.scss";
+@import "_blocks/feedback.scss";
+@import "_blocks/footer.scss";
+@import "_blocks/travel-list.scss";
 
 
 
@@ -54,7 +57,7 @@
   }
 }
 
-.br-phone-only {
+.br-desktop {
   @include for-size(tablet) {
     display: none;
   }

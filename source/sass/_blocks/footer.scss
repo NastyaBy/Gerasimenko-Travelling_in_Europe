@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+
+.footer {
+  max-width: 1153px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  &__inner {
+    margin-left: 12px;
+    border-right: 1px solid $footer-border-color;
+
+    &:last-child{
+      border-right: none;
+    }
+
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  &__travel-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 50px
+  }
+}

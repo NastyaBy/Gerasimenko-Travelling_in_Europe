@@ -1,13 +1,26 @@
 @import '../variables.scss';
 
 .info-price {
+  display: flex;
+  flex-direction: column;
   margin: 10% 0 0 7%;
 
-  &__title {
+  @include for-size(tablet) {
     margin: 0;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0 0 14px;
     font-weight: 600;
     font-size: 55px;
     line-height: 90px;
+
+    @include for-size(tablet) {
+      font-size: 30px;
+      line-height: 45px;
+      margin: 0;
+    }
   }
 
   &__decorative-line {
@@ -15,11 +28,23 @@
     height: 2.92px;
     width: 175px;
     background-color: $accent-primary-color;
+
+    @include for-size(tablet) {
+      display: none;
+    }
   }
 
   &__text {
+    margin: 30px 0;
     font-size: 16px;
     line-height: 27px;
     color: $info-price-text-color;
+
+    @include for-size(tablet) {
+      max-width: 95%;
+      margin: 20px 0 34px;
+      text-align: center;
+    }
+
   }
 }
