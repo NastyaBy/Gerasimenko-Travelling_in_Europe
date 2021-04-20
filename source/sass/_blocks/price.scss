@@ -3,8 +3,9 @@
 .price {
   display: flex;
   flex-direction: column;
-  max-width: 308px;
-  padding: 40px 30px;
+  width: 308px;
+  height: 600px;
+  padding: 40px 30px 30px;
   border: 1px solid $border-price-color;
   border-radius: 6px;
   background: $body-background-color;
@@ -15,7 +16,7 @@
   }
 
   @include for-size(tablet) {
-    max-width: 288px;
+    width: 288px;
     padding: 0;
   }
 
@@ -35,7 +36,7 @@
 
   &__title {
     margin: 0;
-    padding: 0;
+    padding: 0 22px 0 0;
     font-weight: 600;
     font-size: 28px;
     line-height: 34px;
@@ -48,6 +49,9 @@
       margin-bottom: 10px;
     }
 
+    &--economical {
+      margin-right: 40px;
+    }
   }
 
   &__sum {
@@ -58,7 +62,7 @@
   }
 
   &__text {
-    margin: 42px 0 28px;
+    margin: 38px 0 28px;
     font-size: 16px;
     line-height: 24px;
 
@@ -80,7 +84,7 @@
 
   &__options {
     margin: 30px 0 0 0;
-    padding-left: 30px;
+    padding: 0;
 
     @include for-size(tablet) {
       margin: 20px;
@@ -89,10 +93,14 @@
 
   &__option-item {
     margin-bottom: 15px;
+    padding-left: 30px;
     align-items: center;
     font-size: 16px;
     line-height: 32px;
-    list-style-image: url("data:image/svg+xml,%3Csvg width='22' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.614 5.21a1 1 0 01.175 1.404l-7.775 10a1 1 0 01-1.476.112l-4.226-4a1 1 0 111.375-1.452l3.425 3.242 7.098-9.13a1 1 0 011.404-.175z' fill='%23141517'/%3E%3C/svg%3E");
+    background: url("data:image/svg+xml,%3Csvg width='22' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.614 5.21a1 1 0 01.175 1.404l-7.775 10a1 1 0 01-1.476.112l-4.226-4a1 1 0 111.375-1.452l3.425 3.242 7.098-9.13a1 1 0 011.404-.175z' fill='%23141517'/%3E%3C/svg%3E") -3px 6px no-repeat;
+    list-style: none;
+
+
 
     @include for-size(tablet) {
       margin-bottom: 8px;
@@ -101,6 +109,10 @@
   }
 
   &__button {
-    width: 100%;
+    margin-top: auto;
+
+    @include for-size(tablet) {
+      width: 100%;
+    }
   }
 }

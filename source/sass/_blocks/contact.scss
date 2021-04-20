@@ -2,15 +2,18 @@
 
 
 .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  @include for-size(tablet) {
+    align-items: center;
+  }
 
   &__title {
-    margin: 0;
+    margin: 0 0 14px 0;
+    text-align: center;
     font-weight: 500;
     font-size: 22px;
     line-height: 34px;
+
 
     @include for-size(tablet) {
       font-size: 18px;
@@ -20,6 +23,7 @@
   }
 
   &__tel {
+    display: flex;
     font-size: 20px;
     line-height: 32px;
     text-decoration: none;
@@ -29,7 +33,7 @@
     @include for-size(tablet) {
       font-size: 18px;
       text-decoration: underline;
-      color: $accent-primary-color ;
+      color: $accent-primary-color;
       text-decoration-color: $accent-primary-color;
     }
 
@@ -37,12 +41,14 @@
       color: $accent-primary-color;
     }
   }
-    &__icon {
-      align-items: center;
 
-      @include for-size(tablet) {
-        display: none;
-      }
+  &__icon {
+    margin-right: 17px;
+    align-items: center;
+
+    @include for-size(tablet) {
+      display: none;
+    }
 
   }
 }

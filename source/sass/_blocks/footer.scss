@@ -2,17 +2,29 @@
 
 
 .footer {
+  display: flex;
   max-width: 1153px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
 
-  &__inner {
+  @include for-size(tablet) {
+  }
+
+  &__item {
     margin-left: 12px;
     border-right: 1px solid $footer-border-color;
+    flex-shrink: 0;
+    width: 33.3%;
 
     &:last-child{
       border-right: none;
+    }
+
+    &--travel-list {
+
+  }
+
+    &--corporate-travel{
+
     }
 
   }
