@@ -6,7 +6,7 @@
   margin: 111px 0 0 82px;
 
   @include for-size(tablet) {
-    margin: 0;
+    margin: 0 20px;
     align-items: center;
   }
 
@@ -42,7 +42,7 @@
     color: $info-price-text-color;
 
     @include for-size(tablet) {
-      max-width: 95%;
+      width: 100%;
       margin: 20px 0 34px;
       text-align: center;
     }

@@ -65,6 +65,10 @@
     transition: all 0.3s ease-in-out;
     margin-bottom: 234px;
 
+    @include for-size(tablet) {
+      margin-bottom: 80px;
+    }
+
     &--inline {
       display: flex;
       flex-wrap: nowrap;
@@ -173,7 +177,8 @@
       flex-direction: row;
       flex-wrap: wrap-reverse;
       justify-content: center;
-      gap: 50px;
+      gap: 30px 50px;
+      margin-bottom: 124px;
     }
   }
 }

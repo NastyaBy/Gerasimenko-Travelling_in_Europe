@@ -8,8 +8,9 @@
   max-width: 1153px;
 
   @include for-size(tablet) {
-    flex-direction: column;
     position: relative;
+    flex-direction: column;
+    margin-bottom: 80px;
   }
 
   &__preview {
@@ -48,12 +49,20 @@
     font-weight: 600;
     font-size: 25px;
     line-height: 32px;
+
+    @include for-size(tablet) {
+
+    }
   }
 
   &__text {
     margin: 10px 0 0;
     font-size: 16px;
     line-height: 24px;
+
+    @include for-size(tablet) {
+      margin-top: 12px;
+    }
   }
 
   &__contact {
@@ -61,9 +70,18 @@
     align-content: center;
     gap: 19px;
     margin: 24px 0;
+
+    @include for-size(tablet) {
+      margin-bottom: 20px;
+    }
   }
 
   &__button {
-    padding: 18px 40px;
+    min-width: 176px;
+    padding: 19px 40px;
+
+    @include for-size(tablet) {
+      min-width: 250px;
+    }
   }
 }

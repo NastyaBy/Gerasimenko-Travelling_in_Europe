@@ -6,6 +6,7 @@
   margin: 0 auto;
 
   @include for-size(tablet) {
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -19,6 +20,12 @@
     &--travel-list {
       margin-left: 12px;
       width: 389px;
+
+      @include for-size(tablet) {
+        width: auto;
+        margin-left: 21px;
+        padding-right: 50px;
+      }
     }
 
     &--contact {
@@ -26,6 +33,12 @@
       flex-direction: column;
       margin-left: 89px;
       width: 300px;
+
+      @include for-size(tablet) {
+        width: auto;
+        margin-left: 50px;
+        border: none;
+      }
     }
 
     &--corporate-travel {
@@ -33,6 +46,15 @@
       font-size: 14px;
       line-height: 24px;
       width: 320px;
+
+      @include for-size(tablet) {
+        width: auto;
+        max-width: fit-content;
+        margin: 20px 20px 0;
+        padding-top: 29px;
+        text-align: center;
+        border-top: 1px solid $footer-border-color;
+      }
     }
   }
 
@@ -57,10 +79,13 @@
     display: flex;
     margin: 0;
     padding: 0;
-    gap: 50px
+    gap: 50px;
+    @include for-size(tablet) {
+      gap: 48px;
+    }
   }
 
-  &__contact-item{
+  &__contact-item {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
@@ -71,5 +96,9 @@
 
   &__contact-icon {
     margin-right: 15px;
+
+    @include for-size(tablet) {
+      margin-right: 11px;
+    }
   }
 }
