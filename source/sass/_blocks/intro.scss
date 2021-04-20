@@ -2,7 +2,7 @@
 
 .intro {
   position: relative;
-  padding: 185px 0 296px calc(50% + 124px);
+  padding: 185px 0 296px calc(50% + 115px);
   overflow: hidden;
 
   @include for-size(tablet) {
@@ -20,6 +20,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    overflow: hidden;
 
     & > * {
       object-fit: cover;

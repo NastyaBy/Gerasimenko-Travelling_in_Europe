@@ -1,7 +1,7 @@
 @import '../variables.scss';
 
 .places {
-  max-width: 1153px;
+  max-width: 1170px;
   margin: 0 auto;
 
   @include for-size(tablet) {
@@ -65,7 +65,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 30px 60px;
     justify-content: center;
     margin-bottom: 12px;
 
@@ -90,8 +90,10 @@
     }
 
     &--last {
+      margin-left: 60px;
       @include for-size(tablet) {
         margin-top: 11px;
+        margin-left: 0;
       }
     }
   }

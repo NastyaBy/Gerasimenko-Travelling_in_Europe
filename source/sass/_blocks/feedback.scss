@@ -5,12 +5,12 @@
   flex-direction: row;
   align-items: start;
   margin: 0 auto 160px;
-  max-width: 1153px;
+  max-width: 1170px;
 
   @include for-size(tablet) {
     position: relative;
     flex-direction: column;
-    margin-bottom: 80px;
+    margin-bottom: 90px;
   }
 
   &__preview {
@@ -21,6 +21,7 @@
       margin: 0;
       & > * {
         display: block;
+        max-width: 100%;
       }
     }
   }
@@ -29,8 +30,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 6% 0 0 calc(-29% + 5px);
-    padding: 49px;
+    margin: 70px 0 0 -330px;
+    padding: 50px;
     background: $body-background-color;
     box-shadow: 0 4px 30px $feedback-item-box-shadow-color;
     border-radius: 5px;
@@ -39,8 +40,8 @@
       margin: 0;
       position: absolute;
       top: 70px;
-      left: 55px;
-      right: 55px;
+      left: 45px;
+      right: 45px;
     }
   }
 
@@ -78,7 +79,8 @@
 
   &__button {
     min-width: 176px;
-    padding: 19px 40px;
+    padding: 17px 20px;
+    line-height: 16px;
 
     @include for-size(tablet) {
       min-width: 250px;

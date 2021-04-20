@@ -9,7 +9,7 @@
 
   &__body {
     overflow: hidden;
-    max-width: 1153px;
+    max-width: 1170px;
     margin: 0 auto;
 
     @include for-size(tablet) {
@@ -91,7 +91,7 @@
   }
 
   &__general {
-    max-width: 32%;
+    max-width: 370px;
     margin: 0 100px 0 0;
 
     @include for-size(tablet) {
@@ -99,7 +99,7 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      margin: 0 20px;
+      margin: 0 10px;
       padding: 0;
     }
   }
@@ -170,8 +170,8 @@
   &__prices {
     display: flex;
     gap: 30px;
-    max-width: 1153px;
-    margin: 0 auto 140px;
+    max-width: 1170px;
+    margin: 0 auto 137px;
 
     @include for-size(tablet) {
       flex-direction: row;

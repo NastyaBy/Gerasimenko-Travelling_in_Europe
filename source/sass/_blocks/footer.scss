@@ -2,11 +2,13 @@
 
 .footer {
   display: flex;
-  max-width: 1153px;
+  max-width: 1170px;
   margin: 0 auto;
+  padding-bottom: 75px;
 
   @include for-size(tablet) {
     flex-wrap: wrap;
+    padding-bottom: 50px;
   }
 
   &__item {
@@ -63,7 +65,7 @@
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 18px;
-    line-height: 32px;
+    line-height: 36px;
 
     &--contact {
       margin-bottom: 15px;
