@@ -1,6 +1,5 @@
 @import '../variables.scss';
 
-
 .footer {
   display: flex;
   max-width: 1153px;
@@ -10,36 +9,67 @@
   }
 
   &__item {
-    margin-left: 12px;
     border-right: 1px solid $footer-border-color;
     flex-shrink: 0;
-    width: 33.3%;
 
-    &:last-child{
+    &:last-child {
       border-right: none;
     }
 
     &--travel-list {
-
-  }
-
-    &--corporate-travel{
-
+      margin-left: 12px;
+      width: 389px;
     }
 
+    &--contact {
+      display: flex;
+      flex-direction: column;
+      margin-left: 89px;
+      width: 300px;
+    }
+
+    &--corporate-travel {
+      margin-left: 50px;
+      font-size: 14px;
+      line-height: 24px;
+      width: 320px;
+    }
   }
 
   &__title {
+    margin-top: 0;
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 18px;
     line-height: 32px;
+
+    &--contact {
+      margin-bottom: 15px;
+    }
+
+    &--corporate-travel {
+      margin-bottom: 20px;
+    }
   }
+
 
   &__travel-list {
     display: flex;
     margin: 0;
     padding: 0;
     gap: 50px
+  }
+
+  &__contact-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: $accent-primary-color;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__contact-icon {
+    margin-right: 15px;
   }
 }

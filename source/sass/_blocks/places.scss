@@ -70,7 +70,8 @@
     margin-bottom: 12px;
 
     @include for-size(tablet) {
-      gap: 20px;
+      gap: 9px 30px;
+      margin-bottom: 73px;
     }
   }
 
@@ -81,6 +82,18 @@
     margin-bottom: 70px;
     height: 430px;
     width: 350px;
+
+    @include for-size(tablet) {
+      height: 425px;
+      width: 288px;
+      margin-bottom: 10px;
+    }
+
+    &--last {
+      @include for-size(tablet) {
+        margin-top: 11px;
+      }
+    }
   }
 
   &__item-preview {
@@ -112,7 +125,7 @@
     background: $body-background-color;
 
     @include for-size(tablet) {
-      margin: 0 49px;
+      margin: auto 37px 0;
     }
 
     @include for-size(phone-only) {

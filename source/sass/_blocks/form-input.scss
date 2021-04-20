@@ -1,0 +1,28 @@
+@import '../variables.scss';
+
+.form-input {
+
+  &__input {
+    $formInput: & !global;
+    width: 269px;
+    padding: 16px 15px;
+    font-size: 14px;
+    line-height: 17px;
+    box-sizing: border-box;
+    border: 1px solid $feedback-data-input-border-color;
+  }
+
+  &__error {
+    font-size: 12px;
+    line-height: 15px;
+    color: $accent-primary-color;
+
+    & + #{$formInput} {
+      border-color: $accent-primary-color;
+    }
+  }
+
+  &--modal {
+    margin-bottom: 20px;
+  }
+}

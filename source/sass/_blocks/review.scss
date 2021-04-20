@@ -8,6 +8,12 @@
   background: $body-background-color;
   z-index: 2;
 
+  @include for-size(tablet) {
+    max-width: 322px;
+    margin: 80px auto 0;
+    padding-right: 30px;
+  }
+
   &__title {
     margin: 0 0 10px;
     padding: 0;
@@ -15,6 +21,10 @@
     font-size: 30px;
     line-height: 37px;
     letter-spacing: -0.691667px;
+
+    @include for-size(tablet) {
+      margin-bottom: 11px;
+    }
   }
 
   &__decorative-line {

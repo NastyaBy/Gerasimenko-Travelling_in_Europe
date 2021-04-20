@@ -124,7 +124,7 @@
         </picture>
         <h3 class="places__item-title">Черногория</h3>
       </div>
-      <div class="places__item">
+      <div class="places__item places__item--last">
         <picture class="places__item-preview">
           <source type="image/webp" media="(min-width: 1150px)"
                   srcset="./img/croatia-place-desktop@1x.webp 1x, ./img/croatia-place-desktop@2x.webp 2x">
@@ -164,7 +164,7 @@
               в
               Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров,
               наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
-            <button class="button info__button">Купить тур сейчас</button>
+            <button class="button info__button js-modalOpen" data-popup-trigger="order">Купить тур сейчас</button>
           </div>
           <picture class="info__picture">
             <source type="image/webp" media="(min-width: 1150px)"
@@ -201,7 +201,7 @@
               слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до
               такого
               мелкого состояния.</p>
-            <button class="button info__button">Купить тур сейчас</button>
+            <button class="button info__button js-modalOpen" data-popup-trigger="order">Купить тур сейчас</button>
           </div>
           <picture class="info__picture">
             <source type="image/webp" media="(min-width: 1150px)"
@@ -234,7 +234,7 @@
               красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину
               горы
               Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.</p>
-            <button class="button info__button">Купить тур сейчас</button>
+            <button class="button info__button js-modalOpen" data-popup-trigger="order">Купить тур сейчас</button>
           </div>
           <picture class="info__picture">
             <source type="image/webp" media="(min-width: 1150px)"
@@ -269,7 +269,7 @@
               местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона
               составляет
               80 км.</p>
-            <button class="button info__button">Купить тур сейчас</button>
+            <button class="button info__button js-modalOpen" data-popup-trigger="order">Купить тур сейчас</button>
           </div>
           <picture class="info__picture">
             <source type="image/webp" media="(min-width: 1150px)"
@@ -303,7 +303,7 @@
               вас
               на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —
               сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
-            <button class="button info__button">Купить тур сейчас</button>
+            <button class="button info__button js-modalOpen" data-popup-trigger="order">Купить тур сейчас</button>
           </div>
           <picture class="info__picture">
             <source type="image/webp" media="(min-width: 1150px)"
@@ -346,7 +346,7 @@
           <li class="price__option-item">Завтраки, ужины в отелях и ланчи на природе</li>
           <li class="price__option-item">Экскурсии по удивительно красивым местам Европы</li>
         </ul>
-        <button class="button price__button">Купить тур сейчас</button>
+        <button class="button price__button js-modalOpen" data-popup-trigger="order">Купить тур сейчас</button>
       </div>
       <div class="price">
         <div class="price__name">
@@ -362,7 +362,7 @@
           <li class="price__option-item">Только завтраки в отелях</li>
           <li class="price__option-item">Экскурсии по удивительно красивым местам Европы</li>
         </ul>
-        <button class="button price__button">Купить тур сейчас</button>
+        <button class="button price__button js-modalOpen" data-popup-trigger="order">Купить тур сейчас</button>
       </div>
       <div class="info-price">
         <h2 class="info-price__title">Цены</h2>
@@ -370,11 +370,11 @@
         <p class="info-price__text">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь
           от
           Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
-        <div class="contact">
-          <h2 class="contact__title">Свяжитесь с нами</h2>
-          <a class="contact__tel" href="tel:+749978468446"
+        <div class="get-in-touch">
+          <h2 class="get-in-touch__title">Свяжитесь с нами</h2>
+          <a class="get-in-touch__tel" href="tel:+749978468446"
              aria-label="Свяжитесь с нами по телефону +7 499 784 684 46">
-            <svg class="contact__icon contact__icon--tel" width="30" height="30">
+            <svg class="get-in-touch__icon get-in-touch__icon--tel" width="30" height="30">
               <use xlink:href="#phone-icon"></use>
             </svg>
             +7 (499) -784-684-46</a>
@@ -398,14 +398,16 @@
       <h2 class="feedback__title">У Вас остались вопросы?</h2>
       <p class="feedback__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
       <div class="feedback__contact">
-        <div class="feedback__data">
-          <label class="feedback__data-title" for="tel"></label>
-          <input class="feedback__data-input feedback__data-input--tel" id="tel" type="tel"
-                 value="+ 7 Введите 10 цифр номера">
+        <div class="form-input">
+          <label class="form-input__title" for="tel"></label>
+          <input class="form-input__input form-input__input--tel" id="tel" type="tel"
+                 placeholder="+ 7 Введите 10 цифр номера" aria-label="Поле для ввода телефона"
+                 pattern="+7 [0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
         </div>
-        <div class="feedback__data">
-          <label class="feedback__data-title" for="email"></label>
-          <input class="feedback__data-input feedback__data-input--email" id="email" type="email" value="E-mail">
+        <div class="form-input">
+          <label class="form-input__title" for="email"></label>
+          <input class="form-input__input form-input__input--email" id="email" type="email" placeholder="E-mail"
+                 aria-label="Поле для ввода email адреса">
         </div>
       </div>
       <button class="button feedback__button">Отправить</button>
@@ -440,27 +442,60 @@
       </ul>
     </div>
   </div>
-  <div class="footer__item">
-    <h2 class="footer__title ">Наши контакты</h2>
-    <a>
-      <svg class="" width="30" height="30">
+  <div class="footer__item footer__item--contact">
+    <h2 class="footer__title footer__title--contact">Наши контакты</h2>
+    <a class="footer__contact-item">
+      <svg class="footer__contact-icon" width="30" height="30">
         <use xlink:href="#letter-icon"></use>
       </svg>
       puteshestviemechta@gmail.ru</a>
-    <a>
-      <svg class="" width="30" height="30">
+    <a class="footer__contact-item">
+      <svg class="footer__contact-icon" width="30" height="30">
         <use xlink:href="#phone-icon"></use>
       </svg>
       +7 (499) -784-684-46</a>
   </div>
   <div class="footer__item footer__item--corporate-travel">
-    <h2 class="footer__title">Корпоративные путешествия</h2>
+    <h2 class="footer__title footer__title--corporate-travel">Корпоративные путешествия</h2>
     <p class="footer__text">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень
       сближают компанию,
       помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
   </div>
 
 </footer>
+
+<div class="modal js-modal" data-popup-modal="order">
+  <div class="modal__inner">
+    <button class="modal__button-close js-modalCloseBtn">
+      <svg class="modal__button-icon" width="24" height="24">
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </button>
+    <picture class="modal__picture">
+      <source type="image/webp" media="(min-width: 1150px)"
+              srcset="./img/buy-a-tour-desktop@1x.webp 1x, ./img/buy-a-tour-desktop@2x.webp 2x">
+      <img src="img/buy-a-tour-desktop@1x.jpg" srcset="./img/buy-a-tour-desktop@2x.jpg 2x" alt="Пейзаж Море">
+    </picture>
+    <div class="modal__form js-form">
+      <h2 class="modal__title">Купить тур</h2>
+      <div class="form-input form-input--modal">
+        <label class="form-input__title" for="modal-tel"></label>
+        <input class="form-input__input form-input__input--tel js-validateTel" id="modal-tel" type="tel"
+               placeholder="+ 7 Введите 10 цифр номера" aria-label="Поле для ввода телефона"/>
+      </div>
+      <div class="form-input form-input--modal">
+        <label class="form-input__title" for="modal-email"></label>
+        <input class="form-input__input form-input__input--email js-validateEmail" id="modal-email" type="email" placeholder="E-mail"
+               aria-label="Поле для ввода email адреса" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"/>
+      </div>
+      <button class="button modal__button js-sendForm" type="submit">Отправить</button>
+    </div>
+    <div class="modal__success js-success">
+      <h2 class="modal__title modal__title--success">Форма успешно отправлена, спасибо! :)</h2>
+    </div>
+  </div>
+  <i class="modal__blackout js-modalBlackout"></i>
+</div>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="position: fixed; z-index: -100; opacity: 0; height: 0; width: 0;">
 
@@ -482,11 +517,16 @@
   <symbol id="letter-icon" viewBox="0 0 26 20" fill="none" preserveAspectRatio="xMidYMid meet">
     <path
       d="M24.227 0H1.773C.768 0 0 .765 0 1.765v16.47C0 19.235.768 20 1.773 20h22.454C25.232 20 26 19.235 26 18.235V1.765C26 .765 25.232 0 24.227 0zm0 17l-4.668-4.647a.86.86 0 00-1.24 0 .85.85 0 000 1.235l4.667 4.647H3.014l4.668-4.647a.85.85 0 000-1.235.86.86 0 00-1.241 0L1.773 17V5.706l10.636 8a.955.955 0 00.532.176.955.955 0 00.532-.176l10.754-8V17zm0-15.235V3.47l-11.286 8.352L1.773 3.471V1.765h22.454z"
-      fill="#D7D9DF"/>
+      fill="currentColor"/>
   </symbol>
 
+  <symbol id="close-icon" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet">
+    <path d="M1 23L23 1m0 22L1 1" stroke="#141517" stroke-opacity=".2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
 </svg>
 
 <script src="../js/info.min.js"></script>
+<script src="../js/modal.min.js"></script>
+
 </body>
 </html>

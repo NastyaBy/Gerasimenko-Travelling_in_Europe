@@ -10,10 +10,12 @@
 @import "_blocks/preview-name.scss";
 @import "_blocks/price.scss";
 @import "_blocks/info-price.scss";
-@import "_blocks/contact.scss";
+@import "_blocks/get-in-touch.scss";
 @import "_blocks/feedback.scss";
 @import "_blocks/footer.scss";
 @import "_blocks/travel-list.scss";
+@import "_blocks/form-input.scss";
+@import "_blocks/modal.scss";
 
 
 
@@ -22,11 +24,8 @@
 }
 
 .body {
-  display: grid;
-  align-content: start;
   min-height: 100%;
   min-width: 320px;
-  grid-template-rows: min-content 1fr min-content;
   margin: 0 auto;
   padding: 0;
   font-family: "Montserrat", "Arial", sans-serif;
