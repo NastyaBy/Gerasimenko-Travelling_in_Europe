@@ -10,6 +10,10 @@
     line-height: 17px;
     box-sizing: border-box;
     border: 1px solid $feedback-data-input-border-color;
+
+    @include for-size(phone-only) {
+      min-width: 100%;
+    }
   }
 
   &__error {

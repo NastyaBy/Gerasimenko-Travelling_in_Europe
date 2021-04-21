@@ -11,12 +11,22 @@
     padding-bottom: 50px;
   }
 
+  @include for-size(phone-only) {
+    flex-direction: column;
+  }
+
   &__item {
     border-right: 1px solid $footer-border-color;
     flex-shrink: 0;
 
     &:last-child {
       border-right: none;
+    }
+
+    @include for-size(phone-only) {
+      text-align: center;
+      border: 0;
+      padding: 0;
     }
 
     &--travel-list {
@@ -27,6 +37,11 @@
         width: auto;
         margin-left: 21px;
         padding-right: 50px;
+      }
+
+      @include for-size(phone-only) {
+        margin: 0;
+        padding: 0;
       }
     }
 
@@ -40,6 +55,15 @@
         width: auto;
         margin-left: 50px;
         border: none;
+      }
+
+      @include for-size(phone-only) {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 8px 21px -17px 11px;
+        padding-top: 26px;
+        border-top: 1px solid $footer-border-color;
       }
     }
 
@@ -56,6 +80,14 @@
         padding-top: 29px;
         text-align: center;
         border-top: 1px solid $footer-border-color;
+      }
+
+      @include for-size(phone-only) {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 22px 21px -17px 11px;
+        padding-top: 26px;
       }
     }
   }
@@ -84,6 +116,11 @@
     gap: 50px;
     @include for-size(tablet) {
       gap: 48px;
+    }
+    @include for-size(phone-only) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
     }
   }
 

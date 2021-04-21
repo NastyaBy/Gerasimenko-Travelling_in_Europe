@@ -73,6 +73,11 @@
       gap: 9px 30px;
       margin-bottom: 73px;
     }
+
+    @include for-size(phone-only) {
+      gap: 35px;
+      margin: 0 16px 24px;
+    }
   }
 
   &__item {
@@ -82,6 +87,22 @@
     margin-bottom: 70px;
     height: 430px;
     width: 350px;
+    text-decoration: none;
+
+    &:hover {
+      $placeHover: & !global;
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(20, 21, 23, 0.6);
+      }
+
+    }
 
     @include for-size(tablet) {
       height: 425px;
@@ -89,11 +110,20 @@
       margin-bottom: 10px;
     }
 
+    @include for-size(phone-only) {
+      width: 100%;
+      margin: 0;
+    }
+
     &--last {
       margin-left: 60px;
       @include for-size(tablet) {
         margin-top: 11px;
         margin-left: 0;
+      }
+
+      @include for-size(phone-only) {
+        margin: 0;
       }
     }
   }
@@ -129,9 +159,28 @@
     @include for-size(tablet) {
       margin: auto 37px 0;
     }
+  }
 
-    @include for-size(phone-only) {
-      margin: 0 36px;
+  &__item-details {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 264px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 75px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    text-align: center;
+
+    #{$placeHover} & {
+      display: block;
     }
   }
 }

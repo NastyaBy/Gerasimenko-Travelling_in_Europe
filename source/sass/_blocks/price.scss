@@ -104,6 +104,10 @@
     @include for-size(tablet) {
       margin: 20px 20px 30px;
     }
+
+    @include for-size(phone-only) {
+      margin-bottom: 25px;
+    }
   }
 
   &__option-item {
@@ -112,14 +116,15 @@
     align-items: center;
     font-size: 16px;
     line-height: 32px;
-    background: url("data:image/svg+xml,%3Csvg width='22' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.614 5.21a1 1 0 01.175 1.404l-7.775 10a1 1 0 01-1.476.112l-4.226-4a1 1 0 111.375-1.452l3.425 3.242 7.098-9.13a1 1 0 011.404-.175z' fill='%23141517'/%3E%3C/svg%3E") -3px 6px no-repeat;
+    background: url("data:image/svg+xml,%3Csvg width='22' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.614 5.21a1 1 0 01.175 1.404l-7.775 10a1 1 0 01-1.476.112l-4.226-4a1 1 0 111.375-1.452l3.425 3.242 7.098-9.13a1 1 0 011.404-.175z' fill='%23FE7865'/%3E%3C/svg%3E") -3px 6px no-repeat;
     list-style: none;
 
-
+    #{$priceHover} & {
+      background: url("data:image/svg+xml,%3Csvg width='22' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.614 5.21a1 1 0 01.175 1.404l-7.775 10a1 1 0 01-1.476.112l-4.226-4a1 1 0 111.375-1.452l3.425 3.242 7.098-9.13a1 1 0 011.404-.175z' fill='%23141517'/%3E%3C/svg%3E") -3px 6px no-repeat;
+    }
 
     @include for-size(tablet) {
       margin-bottom: 8px;
-
     }
   }
 

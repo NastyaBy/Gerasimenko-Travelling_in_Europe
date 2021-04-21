@@ -19,9 +19,12 @@
       <input class="header-toggle__control" type="checkbox" name="color" id="toggle" value="Toggle">
       <label class="header-toggle__text" for="toggle"></label>
       <nav class="header__nav">
-        <a class="header__nav-link header__nav-link--On-journey" href="#" aria-label="О путешествии">
-          О путешествии</a>
-        <a class="header__nav-link header__nav-link--prices" href="#" aria-label="Цены">Цены</a>
+        <a class="header__nav-link header__nav-link--On-journey" href="#places" aria-label="О путешествии">
+          О путешествии
+        </a>
+        <a class="header__nav-link header__nav-link--prices" href="#prices" aria-label="Цены">
+          Цены
+        </a>
         <a class="header__nav-link header__nav-link--icon header__nav-link--tel" href="tel:+749978468446"
            aria-label="Позвонить нам на телефон +7 499 784 684 46">
           <svg class="header__nav-icon header__nav-icon--tel" width="30" height="30">
@@ -55,12 +58,12 @@
     </a>
   </section>
 
-  <section class="places">
+  <section class="places" id="places">
     <h2 class="places__title">Места посещения</h2>
     <span class="places__decorative-line"></span>
     <p class="places__text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
     <div class="places__list">
-      <div class="places__item">
+      <a class="places__item" href="#prices">
         <picture class="places__item-preview">
           <source type="image/webp" media="(min-width: 1150px)"
                   srcset="./img/greece-place-desktop@1x.webp 1x, ./img/greece-place-desktop@2x.webp 2x">
@@ -74,8 +77,9 @@
           <img src="img/greece-place-mobile@1x.jpg" srcset="./img/greece-place-mobile@2x.jpg 2x" alt="Греция">
         </picture>
         <h3 class="places__item-title">Греция</h3>
-      </div>
-      <div class="places__item">
+        <span class="places__item-details">Смотреть подробнее</span>
+      </a>
+      <a class="places__item" href="#prices">
         <picture class="places__item-preview">
           <source type="image/webp" media="(min-width: 1150px)"
                   srcset="./img/albania-place-desktop@1x.webp 1x, ./img/albania-place-desktop@2x.webp 2x">
@@ -90,8 +94,9 @@
           <img src="img/albania-place-mobile@1x.jpg" srcset="./img/albania-place-mobile@2x.jpg 2x" alt="Албания">
         </picture>
         <h3 class="places__item-title">Албания</h3>
-      </div>
-      <div class="places__item">
+        <span class="places__item-details">Смотреть подробнее</span>
+      </a>
+      <a class="places__item" href="#prices">
         <picture class="places__item-preview">
           <source type="image/webp" media="(min-width: 1150px)"
                   srcset="./img/macedonia-place-desktop@1x.webp 1x, ./img/macedonia-place-desktop@2x.webp 2x">
@@ -106,8 +111,9 @@
           <img src="img/macedonia-place-mobile@1x.jpg" srcset="./img/macedonia-place-mobile@2x.jpg 2x" alt="Македония">
         </picture>
         <h3 class="places__item-title">Македония</h3>
-      </div>
-      <div class="places__item">
+        <span class="places__item-details">Смотреть подробнее</span>
+      </a>
+      <a class="places__item" href="#prices">
         <picture class="places__item-preview">
           <source type="image/webp" media="(min-width: 1150px)"
                   srcset="./img/montenegro-place-desktop@1x.webp 1x, ./img/montenegro-place-desktop@2x.webp 2x">
@@ -123,8 +129,9 @@
                alt="Черногория">
         </picture>
         <h3 class="places__item-title">Черногория</h3>
-      </div>
-      <div class="places__item places__item--last">
+        <span class="places__item-details">Смотреть подробнее</span>
+      </a>
+      <a class="places__item places__item--last" href="#prices">
         <picture class="places__item-preview">
           <source type="image/webp" media="(min-width: 1150px)"
                   srcset="./img/croatia-place-desktop@1x.webp 1x, ./img/croatia-place-desktop@2x.webp 2x">
@@ -139,7 +146,8 @@
           <img src="img/croatia-place-mobile@1x.jpg" srcset="./img/croatia-place-mobile@2x.jpg 2x" alt="Пейзаж Греции">
         </picture>
         <h3 class="places__item-title">Хорватия</h3>
-      </div>
+        <span class="places__item-details">Смотреть подробнее</span>
+      </a>
     </div>
   </section>
 
@@ -332,7 +340,7 @@
         </div>
       </div>
     </div>
-    <div class="info__prices">
+    <div class="info__prices" id="prices">
       <div class="price">
         <div class="price__name">
           <h2 class="price__title">Комплексный</h2>
@@ -485,7 +493,8 @@
       </div>
       <div class="form-input form-input--modal">
         <label class="form-input__title" for="modal-email"></label>
-        <input class="form-input__input form-input__input--email js-validateEmail" id="modal-email" type="email" placeholder="E-mail"
+        <input class="form-input__input form-input__input--email js-validateEmail" id="modal-email" type="email"
+               placeholder="E-mail"
                aria-label="Поле для ввода email адреса" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"/>
       </div>
       <button class="button modal__button js-sendForm" type="submit">Отправить</button>

@@ -51,10 +51,13 @@
     @include for-size(tablet) {
       display: none;
       position: fixed;
+      z-index: 1;
       top: 0;
-      left: 0;
       right: 0;
+      bottom: 0;
+      left: 0;
       flex-direction: column;
+      justify-content: flex-start;
       gap: 30px;
       margin: 0;
       padding: 135px 0 0;
@@ -163,20 +166,17 @@
         flex-grow: 0;
         box-sizing: border-box;
         background: $accent-primary-color url("data:image/svg+xml,%3Csvg width='30' height='30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.75 21h22.5v-1H3.75v1zm0-6.25h22.5v-1H3.75v1zm0-7.25v1h22.5v-1H3.75z' fill='%23fff'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
-
         background-size: 30px auto;
 
         #{$checkboxIsChecked} + & {
           background: url("data:image/svg+xml,%3Csvg width='24' height='25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 23.721L23 1m0 22.721L1 1' stroke='%23141517' stroke-opacity='.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% 50% no-repeat;
           background-size: 20px auto;
-          top: -26px;
           width: 50px;
         }
       }
 
       @include for-size(phone-only) {
         width: 50px;
-        height: 53px;
       }
 
     }

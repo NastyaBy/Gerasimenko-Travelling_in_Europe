@@ -30,6 +30,11 @@
     }
 
     @include for-size(tablet) {
+
+    }
+
+    @include for-size(phone-only) {
+      max-height: 235px;
     }
 
   }

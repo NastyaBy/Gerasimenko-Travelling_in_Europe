@@ -13,16 +13,28 @@
     margin-bottom: 90px;
   }
 
+  @include for-size(phone-only) {
+    margin-bottom: 68px;
+    align-items: stretch;
+  }
+
   &__preview {
     margin-left: 12px;
     z-index: -1;
 
     @include for-size(tablet) {
       margin: 0;
+      width: 100%;
       & > * {
         display: block;
-        max-width: 100%;
+        object-fit: cover;
+        object-position: top;
+        height: 100%;
+        width: 100%;
       }
+    }
+    @include for-size(phone-only) {
+      display: none;
     }
   }
 
@@ -42,6 +54,18 @@
       top: 70px;
       left: 45px;
       right: 45px;
+    }
+    @include for-size(phone-only) {
+      position: relative;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 50px 15px;
+      box-shadow: none;
+      background: $header-nav-link-background;
+      text-align: center;
+      align-items: stretch;
     }
   }
 
@@ -64,6 +88,10 @@
     @include for-size(tablet) {
       margin-top: 12px;
     }
+
+    @include for-size(phone-only) {
+      margin-top: 19px;
+    }
   }
 
   &__contact {
@@ -75,6 +103,11 @@
     @include for-size(tablet) {
       margin-bottom: 20px;
     }
+    @include for-size(phone-only) {
+      flex-direction: column;
+      margin: 18px 0 20px;
+    }
+
   }
 
   &__button {
@@ -84,6 +117,10 @@
 
     @include for-size(tablet) {
       min-width: 250px;
+    }
+
+    @include for-size(phone-only) {
+      min-width: 100%;
     }
   }
 }
