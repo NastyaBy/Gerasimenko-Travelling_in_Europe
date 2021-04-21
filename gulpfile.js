@@ -144,4 +144,4 @@ exports.minifyjs = minifyjs;
   const watch = gulp.series(build, watcher)
   exports.watch = watch
 
-  exports.start = gulp.series(server, watch)
+  exports.start = gulp.series(server, build)
